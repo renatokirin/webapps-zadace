@@ -113,3 +113,45 @@ function reverseOrder(array) {
 }
 
 console.log(reverseOrder([3, 4, 5, 6]));
+
+
+
+
+
+
+// 9. Napisi funkciju koja prima dva objekta, te u slucaju da imaju iste kljuceve vraca true
+
+const object1 = {
+    a: 123,
+    b: 999,
+    c: 222
+}
+
+const object2 = {
+    a: 111,
+    b: 100,
+    c: 789
+}
+
+const object3 = {
+    a: 111,
+    g: 100,
+    c: 789
+}
+
+function compareObjects(obj1, obj2) {
+    const keys1 = Object.keys(obj1);
+    const keys2 = Object.keys(obj2);
+
+    let sameKeys = 0;
+    if (keys1.length === keys2.length) {
+        for (let i = 0; i < keys1.length; i++) {
+            if(keys1[i] === keys2[i]) sameKeys++;
+        }
+    }
+    if (sameKeys === keys1.length) return true;
+
+    return false;
+}
+
+console.log(compareObjects(object1, object2));
