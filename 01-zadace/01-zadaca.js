@@ -96,4 +96,20 @@ function func(x) {
     }
 } 
 
-func(23)
+func(23);
+
+
+
+
+
+// 8. Napisi funkciju koja vraca predano polje obrnutim redoslijedom
+
+function reverseOrder(array) {
+    let newArray = [];
+    for (let i = array.length - 1; i > -1; i--) {
+        newArray.push(array[i]);
+    }
+    return newArray;
+}
+
+console.log(reverseOrder([3, 4, 5, 6]));
