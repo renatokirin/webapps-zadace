@@ -38,3 +38,32 @@ function divisibleBy3(array) {
 }
 
 divisibleBy3(brojevi);
+
+
+
+
+// 6. funkcija kojoj se predaje string, te ona ispisuje bez razmaka svaku rijec velikim slovom (cammelCase)
+function toCammelCase(str) {
+    str = str.toLowerCase();
+    let words = str.split(" ");
+    let firstCharUppercase = [];
+    words.forEach(word => {
+        let restOfTheWord = "";
+        for(let i = 1; i < word.length; i++) {
+            restOfTheWord += word.charAt(i); 
+        }
+        firstCharUppercase.push(word.charAt(0).toUpperCase() + restOfTheWord);
+    })
+
+    firstCharUppercase[0] = firstCharUppercase[0].toLowerCase();
+
+    let newWord = "";
+
+    firstCharUppercase.forEach(word => {
+        newWord += word;
+    })
+
+    console.log(newWord);
+}
+
+toCammelCase("web apps vjezbe");
