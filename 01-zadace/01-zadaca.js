@@ -67,3 +67,33 @@ function toCammelCase(str) {
 }
 
 toCammelCase("web apps vjezbe");
+
+
+
+
+
+
+// 7. funkcija koja za dani broj X provjerava nalazi li se unutar [0, 1000], te mnozi sve visekratnike broja 7 do X te ispisuje rezultat
+function func(x) {
+    if (x >= 0 && x <= 1000) {
+
+        let multiplesOf7 = [];
+
+        for (let i = 0; i < x; i++) {
+            if (i % 7 === 0 && i != 0) {
+                multiplesOf7.push(i);
+            }
+        }
+
+        let final = 1;
+
+        multiplesOf7.forEach(num => {
+            final *= num;
+        })
+
+        console.log(final);
+
+    }
+} 
+
+func(23)
