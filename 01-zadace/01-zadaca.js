@@ -13,3 +13,13 @@ function unutarIntervala(x) {
 }
 
 unutarIntervala(53);
+
+
+// 4) funkcija koja pretvara broj X u sate i minute
+function toHourAndMin(x) {
+    let hours = Math.floor(x / 60);
+    let minutes = x - (hours * 60);
+    console.log("Ovo je " + hours + " sata i " + minutes + " minuta");
+}
+
+toHourAndMin(135);
