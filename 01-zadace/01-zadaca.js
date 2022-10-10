@@ -23,3 +23,18 @@ function toHourAndMin(x) {
 }
 
 toHourAndMin(135);
+
+
+// 5. funkcija koja iz polja brojeva ispisuje brojeve djeljive s 3
+let brojevi = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function divisibleBy3(array) {
+    let newArray = [];
+    array.forEach(num => {
+        if (num % 3 === 0)
+            newArray.push(num); 
+    });
+    console.log('Brojevi djeljivi s 3: ' + newArray);
+}
+
+divisibleBy3(brojevi);
