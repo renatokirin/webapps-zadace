@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon server-prvi.js"
   },
   "dependencies": {
     "express": "^4.18.2",
